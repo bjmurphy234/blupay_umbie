@@ -68,7 +68,7 @@ class BluePay
     ua = Net::HTTP.new(SERVER, 443)
     ua.use_ssl = true
     if File.directory?(RootCA)
-      ua.ca_path = RootCA
+      # ua.ca_path = RootCA
       ua.verify_mode = OpenSSL::SSL::VERIFY_PEER
       ua.verify_depth = 3
     else
